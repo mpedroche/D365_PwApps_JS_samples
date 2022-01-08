@@ -1,4 +1,5 @@
 function CallPowerAutomate(executionContext) {
+    var formContext = executionContext.getFormContext();
     var recordId = executionContext.entityReference.id.replace('{', '').replace('}', '');
     var data = {
         "recordId": recordId
@@ -14,8 +15,8 @@ function CallPowerAutomate(executionContext) {
             if (this.status === 200) {
                 console.log("Flow Call finished successfully");
                 var entityFormOptions = {};
-                entityFormOptions["entityName"] = Xrm.Page.data.entity.getEntityName();
-                entityFormOptions["entityId"] = Xrm.Page.data.entity.getId();
+                entityFormOptions["entityName"] = formContext.data.entity.getEntityName();
+                entityFormOptions["entityId"] = formContext.data.entity.getId();
                 Xrm.Navigation.openForm(entityFormOptions);
             } else {
                 console.log("Flow Call finished with error. Status code: " + this.status);
