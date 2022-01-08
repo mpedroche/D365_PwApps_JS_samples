@@ -39,7 +39,7 @@ function AdvanceBPF(executionContext) {
 
 //Hacemos la llamada patch para actualizar el traversedpath y el active stage
  var req = new XMLHttpRequest();
- req.open("PATCH", "https://org6b21bf98.crm4.dynamics.com/api/data/v9.1/new_fasesdemos(" + BPFInstanceId + 
+ req.open("PATCH", "https://org.crm4.dynamics.com/api/data/v9.1/new_fasesdemos(" + BPFInstanceId + 
 ")", true);
  req.setRequestHeader("OData-MaxVersion", "4.0");
  req.setRequestHeader("OData-Version", "4.0");
