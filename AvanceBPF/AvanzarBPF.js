@@ -46,7 +46,6 @@ function AdvanceBPF(executionContext) {
  req.setRequestHeader("Accept", "application/json");
  req.setRequestHeader("Content-Type", "application/json; charset=utf-8");
  req.onreadystatechange = function() {
-     debugger;
      if (this.readyState === 4) {
          req.onreadystatechange = null;
 
